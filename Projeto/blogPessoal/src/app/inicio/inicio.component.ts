@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { reverse } from 'dns';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
@@ -25,6 +26,9 @@ export class InicioComponent implements OnInit {
 
   user: User = new User()
   idUser = environment.id
+
+  key = 'data'
+  reverse = true
 
 
   constructor(
